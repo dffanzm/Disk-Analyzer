@@ -1,0 +1,39 @@
+# ─── Rust Backend ───────────────────────────────────────────
+backend/target/
+**/*.rs.bk
+
+# ─── Node / Frontend ───────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.astro/
+
+# ─── Lock files (optional — include if you want reproducible builds) ──
+# Uncomment these if you do NOT want lock files in the repo:
+# backend/Cargo.lock
+# frontend/package-lock.json
+
+# ─── OS & Editor ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ─── Binaries & Installers ─────────────────────────────────
+*.exe
+*.dll
+*.so
+*.dylib
+
+# ─── Environment & Secrets ─────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─── AI / Claude config ────────────────────────────────────
+.claude/
+
+# ─── Misc ──────────────────────────────────────────────────
+*.log

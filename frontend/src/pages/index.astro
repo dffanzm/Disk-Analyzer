@@ -1,0 +1,63 @@
+---
+import MainApp from '../components/MainApp';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disk Space Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style is:global>
+    :root {
+      --color-primary: #0F172A;
+      --color-on-primary: #FFFFFF;
+      --color-secondary: #1E293B;
+      --color-accent: #22C55E;
+      --color-background: #020617;
+      --color-foreground: #F8FAFC;
+      --color-muted: #1A1E2F;
+      --color-border: #334155;
+      --color-destructive: #EF4444;
+      --color-ring: #0F172A;
+    }
+    body {
+      min-height: 100vh;
+      background-color: var(--color-background);
+      font-family: 'Fira Sans', sans-serif;
+      color: var(--color-foreground);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto px-4 py-8 max-w-7xl">
+    <header class="mb-8 border-b border-border pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div>
+        <h1 class="text-3xl font-bold text-foreground flex items-center">
+          <svg class="w-8 h-8 mr-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+          Disk Analyzer
+        </h1>
+        <p class="text-slate-400 mt-1 font-mono text-sm opacity-80">SYSTEM_METRICS // STORAGE_VISUALIZATION</p>
+      </div>
+      <div class="flex items-center gap-2 text-sm font-mono text-slate-400">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+        </span>
+        System Online
+      </div>
+    </header>
+
+    <MainApp client:load />
+
+    <footer class="mt-12 text-center text-slate-500 text-sm">
+      <p>Powered by Rust, Axum, Astro & React.</p>
+    </footer>
+  </div>
+</body>
+</html>
