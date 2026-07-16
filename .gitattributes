@@ -1,0 +1,4 @@
+# Tell GitHub Linguist to ignore generated/vendored files
+frontend/package-lock.json linguist-generated=true
+backend/Cargo.lock linguist-generated=true
+frontend/design-system/** linguist-documentation=true
